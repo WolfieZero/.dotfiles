@@ -1,0 +1,10 @@
+# gitconfig
+[user]
+    name = Neil Sweeney
+    email = neil@wolfiezero.com
+[github]
+    user = WolfieZero
+[init]
+	defaultBranch = main
+[includeIf "gitdir:~/Refiine/"]
+    path = ~/Refiine/.gitconfig
