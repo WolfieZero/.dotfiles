@@ -14,7 +14,7 @@ apps=(
   spotify                   # music
   atext                     # text completion
   rectangle                 # window control
-  ferdi                     # chats
+  monitorcontrol            # brihgtness control
 )
 
 brew_install_multiple "${apps[@]}"

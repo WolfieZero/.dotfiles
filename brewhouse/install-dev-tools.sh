@@ -18,7 +18,7 @@ apps=(
   visual-studio-code    # code editor
 
   # Database
-  sequel-ace            # mysql/mariadb tool
+  # sequel-ace            # mysql/mariadb tool
   # sqlectron             # generic db tool
 
   #Browser
@@ -29,6 +29,9 @@ apps=(
 
   # Design
   figma
+
+  # Screen shots
+  shottr
 
 )
 
