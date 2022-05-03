@@ -5,11 +5,11 @@
 [core]
 	excludesfile = /Users/neil/.gitignore
 [github]
-    user = WolfieZero
+	user = WolfieZero
 [init]
 	defaultBranch = main
 [includeIf "gitdir:~/Refiine/"]
-    path = ~/Refiine/.gitconfig
+	path = ~/Refiine/.gitconfig
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
