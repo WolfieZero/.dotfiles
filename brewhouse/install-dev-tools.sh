@@ -36,3 +36,7 @@ apps=(
 )
 
 brew_install_multiple "${apps[@]}"
+
+echo 'App Store Installables'
+echo '----------------------'
+echo ' - Sysytem Color Picker  https://apps.apple.com/gb/app/system-color-picker/id1545870783?mt=12'

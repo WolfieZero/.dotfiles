@@ -12,7 +12,7 @@ apps=(
   notion                    # note app
   numi                      # verbose calculator
   spotify                   # music
-  atext                     # text completion
+  # atext                     # text completion
   rectangle                 # window control
   monitorcontrol            # brihgtness control
 )
