@@ -63,6 +63,7 @@ export PATH="$PATH:./.vendor/bin:$PATH"
 
 export PATH="$PATH:./vendor/bin"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="$PATH:./docker-containers/laravel/sail/bin"
 
 # Flutter
 # ------------------------------------------------------------------------------
