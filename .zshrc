@@ -86,10 +86,10 @@ export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
 # autoload `nvm use`
 # ------------------------------------------------------------------------------
 
-if test -f "/opt/homebrew/opt/nvm/nvm.sh"; then
+if test -f "/usr/local/opt/nvm/nvm.sh"; then
   export NVM_DIR="$HOME/.nvm"
-    . "/opt/homebrew/opt/nvm/nvm.sh"
-    . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+    . "/usr/local/opt/nvm/nvm.sh"
+    . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
   autoload -U add-zsh-hook
 
