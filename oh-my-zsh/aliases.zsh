@@ -44,6 +44,8 @@ alias stopenv="deactivate"
 
 alias artisan="php artisan"
 alias valet-open="e ~/.valet"
+alias use-php74="brew link --overwrite --force shivammathur/php/php@7.4"
+alias use-php="brew unlink php && brew link php"
 
 # Other
 # ------------------------------------------------------------------------------
