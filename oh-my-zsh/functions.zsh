@@ -29,7 +29,7 @@ function fix-bluetooth() {
   defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
   defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
   defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
-  sudo killall bluetoothaudiod
+  sudo killall bluetoothd
 }
 
 # Server
