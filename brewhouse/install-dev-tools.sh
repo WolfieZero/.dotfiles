@@ -36,7 +36,6 @@ apps=(
 
 brew_install_multiple "${apps[@]}"
 
-echo 'App Store Installables'
-echo '----------------------'
-echo ' - Sysytem Color Picker  https://apps.apple.com/gb/app/system-color-picker/id1545870783?mt=12'
-echo ' - Timemator Basic       https://apps.apple.com/gb/app/timemator-basic/id1458451198?mt=12
+# mas install 1518036000 # Sequel Ace
+# mas install 1458451198 # Timemator Basic
+mas install 1545870783 # system color picker

@@ -15,11 +15,10 @@ apps=(
   atext                     # text completion
   rectangle                 # window control
   monitorcontrol            # brihgtness control
+  mas                       # cli tool for mac app store
 )
 
 brew_install_multiple "${apps[@]}"
 
-echo 'App Store Installables'
-echo '----------------------'
-echo ' - Hidden Bar  https://apps.apple.com/gb/app/hidden-bar/id1452453066?mt=12'
-echo ' - Velga       https://apps.apple.com/gb/app/velja/id1607635845?mt=12'
+mas install 1452453066 # hidden bar
+mas install 1607635845 # velga
