@@ -6,4 +6,5 @@ source ~/.dotfiles/brewhouse/_config.sh
 # ------------------------------------------------------------------------------
 
 brew tap homebrew/cask-fonts
-brew install --cask font-victor-mono
+brew install font-victor-mono
+brew install font-fira-code-nerd-font
