@@ -19,7 +19,7 @@ apps=(
 
   # Database
   # sequel-ace            # mysql/mariadb tool
-  # sqlectron             # generic db tool
+  tableplus               # generic db tool
 
   # Browser
   # homebrew/cask-versions/firefox-developer-edition
