@@ -153,7 +153,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 #sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 
 # Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 # ------------------------------------------------------------------------------
 # Energy saving
@@ -237,7 +237,7 @@ defaults write com.apple.screencapture type -string "png"
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
@@ -273,7 +273,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 
 # Display full POSIX path as Finder window title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
