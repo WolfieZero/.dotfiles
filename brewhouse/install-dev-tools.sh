@@ -19,19 +19,15 @@ apps=(
 
   # Database
   # sequel-ace            # mysql/mariadb tool
-  tableplus               # generic db tool
+  # tableplus               # generic db tool
 
   # Browser
-  # homebrew/cask-versions/firefox-developer-edition
-  # homebrew/cask-versions/google-chrome-dev
+  homebrew/cask-versions/firefox-developer-edition
+  homebrew/cask-versions/google-chrome-dev
   # google-chrome
 
   # Design
   figma
-
-  # Screen shots
-  shottr
-
 )
 
 brew_install_multiple "${apps[@]}"
