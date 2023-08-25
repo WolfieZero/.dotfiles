@@ -1,2 +1,2 @@
 /secure/*
-!/secure/.gitkeep
+!/secure/_empty.zsh
