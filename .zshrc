@@ -13,6 +13,9 @@ ZSH_THEME="boom"
 export CLICOLOR=1
 export TERM=xterm-256color
 
+NVM_HOMEBREW=$(brew --prefix nvm)
+zstyle ':omz:plugins:nvm' autoload true
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ------------------------------------------------------------------------------
 
@@ -29,7 +32,7 @@ for file (${DOTFILES}/secure/*.zsh); source $file
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(zsh-syntax-highlighting laravel node)
+plugins=(zsh-syntax-highlighting node nvm)
 
 # Load Oh My Zsh
 # ------------------------------------------------------------------------------
@@ -83,45 +86,5 @@ export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
 # ------------------------------------------------------------------------------
 
 export PATH="${HOME}/Library/Android/sdk/emulator:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
-
-# Autoload `nvm use`
-# ------------------------------------------------------------------------------
-
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-
-# arm
-if test -f "/opt/homebrew/opt/nvm/nvm.sh"; then
-  export NVM_DIR="$HOME/.nvm"
-    . "/opt/homebrew/opt/nvm/nvm.sh"
-    . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-  autoload -U add-zsh-hook
-  add-zsh-hook chpwd load-nvmrc
-  load-nvmrc
-fi
-
-# x86_64
-if test -f "/usr/local/opt/nvm/nvm.sh"; then
-  export NVM_DIR="$HOME/.nvm"
-    . "/opt/homebrew/opt/nvm/nvm.sh"
-    . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-  autoload -U add-zsh-hook
-  add-zsh-hook chpwd load-nvmrc
-  load-nvmrc
-fi
 
 # After this list it's been added automatically --------------------------------
