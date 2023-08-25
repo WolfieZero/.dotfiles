@@ -8,8 +8,8 @@
 	user = WolfieZero
 [init]
 	defaultBranch = main
-[includeIf "gitdir:~/Refiine/"]
-	path = ~/Refiine/.gitconfig
+[includeIf "gitdir:~/Dootrix/"]
+	path = ~/Dootrix/.gitconfig
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
