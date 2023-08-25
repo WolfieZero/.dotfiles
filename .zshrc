@@ -21,9 +21,7 @@ ZSH_CUSTOM=${DOTFILES}/oh-my-zsh
 # Additional private configs
 # ------------------------------------------------------------------------------
 
-# for config_file (${HOME}/.secret-zsh/*.zsh(N)); do
-#   source $config_file
-# done
+for file (${DOTFILES}/secure/*.zsh); source $file
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # ------------------------------------------------------------------------------
@@ -51,13 +49,11 @@ export PATH="$PATH:./node_modules/.bin"
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
-# PHP / Composer
+# PHP
 # ------------------------------------------------------------------------------
 
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/php@7.4/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/php@7.4/include"
+export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
 
 export PATH="$PATH:./.vendor/bin:$PATH"
 
@@ -83,36 +79,49 @@ export LDFLAGS="-L/usr/local/opt/sqlite/lib"
 export CPPFLAGS="-I/usr/local/opt/sqlite/include"
 export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
 
-# autoload `nvm use`
+# Android
 # ------------------------------------------------------------------------------
 
+export PATH="${HOME}/Library/Android/sdk/emulator:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+
+# Autoload `nvm use`
+# ------------------------------------------------------------------------------
+
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+
+# arm
 if test -f "/opt/homebrew/opt/nvm/nvm.sh"; then
   export NVM_DIR="$HOME/.nvm"
     . "/opt/homebrew/opt/nvm/nvm.sh"
     . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
   autoload -U add-zsh-hook
-
-  load-nvmrc() {
-    local node_version="$(nvm version)"
-    local nvmrc_path="$(nvm_find_nvmrc)"
-    if [ -n "$nvmrc_path" ]; then
-      local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-      if [ "$nvmrc_node_version" = "N/A" ]; then
-        nvm install
-      elif [ "$nvmrc_node_version" != "$node_version" ]; then
-        nvm use
-      fi
-    elif [ "$node_version" != "$(nvm version default)" ]; then
-      echo "Reverting to nvm default version"
-      nvm use default
-    fi
-  }
-
   add-zsh-hook chpwd load-nvmrc
   load-nvmrc
-
 fi
 
-# --------------- After this list it's been added automatically ---------------
+# x86_64
+if test -f "/usr/local/opt/nvm/nvm.sh"; then
+  export NVM_DIR="$HOME/.nvm"
+    . "/opt/homebrew/opt/nvm/nvm.sh"
+    . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+  autoload -U add-zsh-hook
+  add-zsh-hook chpwd load-nvmrc
+  load-nvmrc
+fi
+
+# After this list it's been added automatically --------------------------------
