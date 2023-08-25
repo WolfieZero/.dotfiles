@@ -38,6 +38,7 @@ alias git--degit="npx degit $1"
 
 alias startenv="source env/bin/activate"
 alias stopenv="deactivate"
+# alias python="python3"
 
 # PHP
 # ------------------------------------------------------------------------------
@@ -55,4 +56,6 @@ alias bu="brew update && brew upgrade && brew cleanup"
 alias hosts="code /etc/hosts"
 alias add-dock-split="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}' && killall Dock"
 alias serve="npx browser-sync start --server --files '**/*.*' --no-notify --no-open"
-
+alias l="exa -lah"
+alias ibrew="arch -x86_64 /usr/local/bin/brew" # running brew for Rosetta
+# alias brew="arch -arm64e /opt/homebrew/bin/brew" # running brew natively
