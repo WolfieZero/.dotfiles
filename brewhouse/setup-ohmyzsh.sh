@@ -6,6 +6,6 @@ source ~/.dotfiles/brewhouse/_config.sh
 # ------------------------------------------------------------------------------
 
 rm -f ~/.zshrc
-ln -s ~/.dotfiles/oh-my-zsh/zshrc ~/.zshrc
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
 source ${HOME}/.zshrc

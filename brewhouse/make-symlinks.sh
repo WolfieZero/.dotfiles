@@ -6,7 +6,7 @@ source ~/.dotfiles/brewhouse/_config.sh
 # ------------------------------------------------------------------------------
 
 # rm -rf ~/.ssh
-ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/System/ssh ~/.ssh
+ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/System/ssh/ ~/.ssh
 
 # rm -rf ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
