@@ -7,14 +7,14 @@ source ~/.dotfiles/brewhouse/_config.sh
 
 apps=(
   appcleaner                # removes apps
-  keepingyouawake           # disable screen sleep
+  # keepingyouawake           # disable screen sleep
   keka                      # file archiver
   notion                    # note app
-  numi                      # verbose calculator
+  # numi                      # verbose calculator
   spotify                   # music
-  atext                     # text completion
+  # atext                     # text completion
   rectangle                 # window control
-  monitorcontrol            # brihgtness control
+  # monitorcontrol            # brihgtness control
   mas                       # cli tool for mac app store
 )
 

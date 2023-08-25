@@ -32,6 +32,4 @@ apps=(
 
 brew_install_multiple "${apps[@]}"
 
-# mas install 1518036000 # Sequel Ace
-# mas install 1458451198 # Timemator Basic
 mas install 1545870783 # system color picker
