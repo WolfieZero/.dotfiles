@@ -15,7 +15,7 @@ function fix-ssh() {
 function fix-git() {
   echo 'Fixing git config'
   git config user.name "Neil Sweeney"
-  git config user.email "neil@wolfiezero.com"
+  git config user.email "neil@enhko.com"
 }
 
 # Fix Bluetooth?
@@ -72,6 +72,8 @@ function dotfiles() {
   esac
 }
 
+alias dot="dotfiles"
+
 # Create a personal project
 # ------------------------------------------------------------------------------
 
@@ -114,4 +116,18 @@ function create-personal-project() {
 
 function mcd() {
     mkdir "$@" && cd "$@"
+}
+
+# Make and change directory and add Git
+# ------------------------------------------------------------------------------
+
+function mcdg() {
+    mkdir "$@" && cd "$@" && git init
+}
+
+# Git ingore configs
+# ------------------------------------------------------------------------------
+
+function gi() {
+  curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;
 }
