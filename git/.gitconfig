@@ -3,7 +3,7 @@
 	email = neil@enhko.com
 	signingKey = ""
 [core]
-	excludesfile = /Users/neil/.gitignore
+	excludesFile = ~/.dotfiles/.gitignore_global
 [github]
 	user = WolfieZero
 [init]
