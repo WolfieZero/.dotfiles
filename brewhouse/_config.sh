@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# `brew install` shortcut
+# `brew install`  list installer
 brew_install_multiple () {
   apps="${1}"
   shift
@@ -9,4 +9,14 @@ brew_install_multiple () {
     brew install $app
   done
   brew cleanup
+}
+
+# `mass install` list installer
+app_store_install_multiple () {
+  apps="${1}"
+  shift
+  for app in ${apps[*]}
+  do
+    mas install $app
+  done
 }

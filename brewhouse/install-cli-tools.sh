@@ -7,8 +7,10 @@ source ~/.dotfiles/brewhouse/_config.sh
 
 tools=(
   htop         # terminal system monitor
-  # imagemagick  #
-  exa          # ls replacement
+  fzf          # fuzzy finder
+  eza          # ls replacement
+  bat          # cat replacement
+  fd           # find replacement
 )
 
 brew_install_multiple "${tools[@]}"

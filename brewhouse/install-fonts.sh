@@ -6,5 +6,8 @@ source ~/.dotfiles/brewhouse/_config.sh
 # ------------------------------------------------------------------------------
 
 brew tap homebrew/cask-fonts
-brew install font-victor-mono
-brew install font-fira-code-nerd-font
+# brew install font-victor-mono
+# brew install font-fira-code-nerd-font
+
+# https://github.com/githubnext/monaspace/
+# Segoe fonts
